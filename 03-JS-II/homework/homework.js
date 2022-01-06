@@ -5,12 +5,34 @@ function obtenerMayor(x, y) {
   // Devuelve el número más grande
   // Si son iguales, devuelve cualquiera de los dos
   // Tu código:
+  if (x>y)
+  {
+    return x;
+  }
+  else if(x<y)
+  {
+    return y;
+  }  
+  else
+  {
+    return x;
+  }
 }
 
 function mayoriaDeEdad(edad) {
   //Determinar si la persona según su edad puede ingresar a un evento.
   //Si tiene 18 años ó más, devolver --> "Allowed"
   //Si es menor, devolver --> "Not allowed"
+  if (edad>=18)
+  {
+    return "Allowed";
+  }
+  else
+  {
+    return "Not allowed";
+  } 
+
+
 }
   
 function conection(status) {
@@ -19,6 +41,8 @@ function conection(status) {
   //Cuando el estado es igual a 2, el usuario está "Away"
   //De lo contrario, presumimos que el usuario está "Offline"
   //Devolver el estado de conexión de usuario en cada uno de los casos.
+
+
 }
 
 function saludo(idioma) {
@@ -50,6 +74,15 @@ function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
+  if (numero>20 && numero<50)
+  {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
+
 }
 
 function esEntero(numero) {
@@ -60,6 +93,14 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
+  if (Number.isInteger(numero)===true)
+  {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
 }
 
 function fizzBuzz(numero) {
@@ -67,6 +108,22 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
+  if ((numero%3)===0 && (numero%5)===0)
+  {
+    return "fizzbuzz";
+  }
+  else if ((numero%3)===0)
+  {
+    return "fizz";
+  }
+  else if ((numero%5)===0)
+  {
+    return "buzz";
+  }
+  else
+  {
+    return numero;
+  }
 }
 
 function operadoresLogicos(num1, num2, num3) {
@@ -97,12 +154,33 @@ function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
-  
+  /*
+  let tabla[10];
+
+  for (let i=0; i<11; i++)
+  {
+    tabla[i] = 6*i;
+  }
+
+  */
+  let tabla = [];
+
+  for (let i=0; i<11; i++)
+  {
+    tabla.push (6*i);
+  }
+  return tabla;
+
 }
 
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
+  if(numero > 99 && numero < 1000)
+  {
+    return true
+  }
+  return false
   
 }
 
@@ -110,7 +188,16 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+  let a=numero;
+  let i=0;
+  do
+  {
+    a+=5;
+    i++;
+  }while (i<8);
+  return a;
 }
+
 
 
 // No modificar nada debajo de esta línea
