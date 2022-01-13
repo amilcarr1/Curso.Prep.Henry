@@ -39,7 +39,7 @@ function invocarMetodo(objeto, metodo) {
   // Nada necesita ser devuelto ("returned")
   // Tu código:
 
-  objeto[metodo]();
+  objeto[metodo](); // En este caso no se usa el punto porque metodo es un string
 
 }
 
@@ -90,7 +90,7 @@ function tieneEmail(usuario) {
   // De lo contratio, devuelve "false"
   // Tu código:
 
-  if (usuario['email'])
+  if (usuario.email) // La notacion . es lo mismo que ['email']
   {
     return true;
   }
@@ -125,7 +125,7 @@ function verificarPassword(usuario, password) {
   // De lo contrario, devuelve "false"
   // // Tu código:
 
-  if (usuario['password']===password)
+  if (usuario.password===password)
   {
     return true;
   }
@@ -152,7 +152,7 @@ function agregarAmigo(usuario, nuevoAmigo) {
   // Devuelve el objeto "usuario"
   // // Tu código:
 
-  usuario.amigos.push(nuevoAmigo);  // usuario[amigos].push(nuevoAmigo);
+  usuario.amigos.push(nuevoAmigo);
 
   return usuario;
 

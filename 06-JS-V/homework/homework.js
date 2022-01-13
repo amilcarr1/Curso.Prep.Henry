@@ -50,7 +50,7 @@ function agregarStringInvertida() {
 
     for (let i=this.length-1; i>=0; i--)
     {
-      str_invertido =  str_invertido + this.charAt(i);
+      str_invertido =  str_invertido + this[i]; // Es lo mismo que "+ this.charAt(i)"
     }
     return str_invertido;
   }

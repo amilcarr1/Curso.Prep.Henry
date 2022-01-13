@@ -39,6 +39,7 @@ function sumarArray(numeros, cb) {
     suma+=numeros[i];
   }
   cb(suma);
+
 }
 
 function forEach(array, cb) {
@@ -47,11 +48,16 @@ function forEach(array, cb) {
   // Pista: Estarás invocando a `cb` varias veces (una por cada 
   // valor en la matriz)
   //Tu código:
-
+/*
   for (let i=0; i<array.length; i++)
   {
     cb(array[i]);
   }
+*/
+  array.forEach (function(elemento)
+  {
+    cb(elemento);
+  })
 
 }
 
@@ -63,29 +69,39 @@ function map(array, cb) {
   // argumento
   //Tu código:
 
-  let nuevo = [];
-                /// NO ENTIENDO EL EJERCICIO
-  for (let i=0; i<array.length; i++)
+  // El map recibe una funcion, la cual tiene como parametro cada elemento del array
+  // El map retorna sobre un nuevo array con el cambio que se especifique en la funcion
+  
+  let nuevo_arr = array.map(function(elemento)
   {
-    nuevo.push(cb(array[i]));
-  }
-  return cb;
+    return cb(elemento);
+  });  
+
+  return nuevo_arr;
+  
 }
 
 function filter(array) {
   //Filtrar todos los elementos del array que comiencen con la letra "a".
   //Devolver un nuevo array con los elementos que cumplen la condición
   //Tu código:
+/*
   let arr = [];
 
   for (let i=0; i<array.length; i++)
   {
-    if (array.charAt[0] === 'a')
+    if (array[i][0] === 'a') // array[i].charAt[0] === 'a'
     {
       arr.push(array[i]);
     }
   }
   return arr;
+*/
+
+  return array.filter (function (e)
+  {
+    return (e[0] === 'a')
+  });
 }
 
 // No modificar nada debajo de esta línea
