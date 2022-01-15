@@ -10,9 +10,18 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
-
+/*
   console.log (Object.entries(objeto))
   return Object.entries(objeto);
+*/
+/*
+   var arreglo = [];
+   
+   for (let x in objeto)
+   {
+     arreglo.push ([x, objeto[x]]);
+   }
+*/
 
 }
 
@@ -33,7 +42,7 @@ function numberOfCharacters(string) {
   
   return objeto;
   */
-
+/*
   var objeto = {}
 
   
@@ -48,8 +57,9 @@ function numberOfCharacters(string) {
   }
   
   return objeto
-}
+*/
 
+}
 
 function capToFront(s) {
   //Realiza una función que reciba como parámetro un string y mueva todas las letras mayúsculas
@@ -57,6 +67,22 @@ function capToFront(s) {
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
 
+  var cadMa = "";
+  var cadMi = "";
+
+  for (let i=0; i<s.length; i++)
+  {
+    if (s[i] === s[i].toUpperCase())
+    {
+      cadMa += s[i];
+    }
+    else
+    {
+      cadMi += s[i];
+    }
+  }
+
+  return ("cadMa ' '+ cadMi");
 }
 
 
@@ -133,4 +159,3 @@ module.exports = {
    sortArray,
    buscoInterseccion,
 };
-
